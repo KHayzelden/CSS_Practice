@@ -1,0 +1,351 @@
+@charset "utf-8";
+/*Color Pallet
+Pink: #FD91C1
+Orange: #FEDF74
+Blue: #7EB8E2
+Green: #A5C059*/
+
+/*General css to define base font for all pages*/
+body
+{
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+}
+
+/*The css for the top naivgation bar for the whole site (except the home page)*/
+nav
+{
+	text-align: center;
+}
+
+nav ul.siteWideNav
+{
+	list-style-type: none;
+}
+
+nav ul.siteWideNav li
+{
+	display: inline-block;
+	padding: 20px;
+}
+
+nav ul.siteWideNav li a 
+{
+	font-family: 'Handlee', cursive;
+	display: block;
+    background-color: #FD91C1;
+	text-decoration: none;
+	color: white;
+	font-size: 14px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	line-height: 4em;
+	transition: 1s;
+}
+
+nav ul.siteWideNav li a:hover
+{
+	transition: 2s;
+	transform: scale(1.5); /* enlarges the buttons on hover */
+	color: #FEDF74;
+}
+
+/* makes the first button of the nav blue and the last green to overwrite the general pink (and match the theme)*/
+nav ul.siteWideNav li:first-child a
+{
+	background-color: #7EB8E2;
+}
+
+nav ul.siteWideNav li:last-child a
+{
+	background-color: #A5C059;
+}
+
+
+/*home page specific css*/
+body.home 
+{
+	background-image: url("cupcake.jpg");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+headder.mainTitle
+{
+	font-family: 'Dancing Script', cursive; /* uses imported font */
+	font-size: 200px;
+	color: #FEDF74;
+	text-shadow: 1px 1px 0 #FEDF74, -1px -5px 0 #FD91C1, 1px -5px 0 #FD91C1, -1px 1px 0 #FD91C1, 1px 1px 0 #FD91C1;
+	align-content: center;
+	position: relative;
+	left: 35%;
+	top: 10px;
+	overflow: auto;
+}
+
+/* makes the nav for the main page larger and positioned in the center */
+ul.homePageNav
+{
+	list-style: none;
+	position: absolute;
+	top: 200px;
+	left: 40%;
+}
+
+ul.homePageNav li
+{	
+	letter-spacing: 4px;
+	display: inline-block;
+	list-style-type: none;
+}
+
+/* turns the home page nav links into "buttons" */
+.button
+{
+	display: block;
+    background-color: #FD91C1;
+	color: white;
+	font-family: 'Handlee', cursive;
+	font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+	margin: 50px;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	line-height: 7em;
+	transition: 3s;
+}
+
+.button:hover
+{
+	transition: 2s;
+	transform: scale(1.5);
+	color: #FEDF74;
+}
+
+/* additional css for the twitter (some is inline for coloring) */
+.twitter
+{
+	position: relative;
+	top: 175px;
+	width: 600px;
+	left: 43%;
+}
+
+/* CSS for the backgrounds of all except the home page, pictures defined seperate*/
+body:not(.home)
+{
+	background-position: bottom;
+	background-repeat: repeat-x; /* causes all seperate pictures to be at the bottom center and repeat horizontally 50% on each side */
+	background-attachment: fixed;
+	background-size: 50%;
+}
+
+/* About Page specific CSS */
+
+body.about
+{
+	background: linear-gradient(white 95%, #FEDF74);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+body.about article
+{
+	color: #FD91C1;
+	position: absolute;
+	top: 120px;
+	margin: 20px;
+	padding: 10px;
+	border-radius: 50px;
+	width: 45%;
+	word-wrap: break-word;
+}
+
+body.about article h1
+{
+	color: #FD91C1;
+	font-size: 120px;
+	position: relative;
+	text-align: center;
+	margin: -20px;
+	font-family: 'Dancing Script', cursive;
+	/* applies shadowns in multiple directions to act as if it were a border*/
+	text-shadow: 1px 1px 0 #FEDF74, -1px -5px 0 #FEDF74, 1px -5px 0 #FEDF74, -1px 1px 0 #FEDF74, 1px 1px 0 #FEDF74; 
+}
+
+/* aligns every other header on the opposite side for appearance */
+body.about article section:nth-child(odd)
+{
+	text-align: right;
+}
+
+body.about article section h2
+{
+	font-family: 'Handlee', cursive; /* another imported font */
+	color: #7EB8E2;
+	letter-spacing: 2px;
+	word-spacing: 2px;
+}
+
+body.about article section p
+{
+	text-align: justify;
+	font-size: 15px;
+}
+
+/* makes the image of "me" take up a set % of the page and adjust hight with the window to prevent warping */
+img.myImage
+{
+	position: fixed;
+  	bottom: 0px;
+  	right: 2%;
+	width: 45%;
+	min-height: auto; 
+	z-index: -2; /* set back so the invisible part of the image doesnt block the navigation buttons when the window is large */
+}
+
+/*blog page specific css*/
+body.blog
+{
+	background-image: url("cakepops.jpg");
+	color: #FD91C1;
+}
+
+body.blog article
+{
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	margin: 20px;
+	padding: 10px;
+	border-radius: 50px;
+	word-wrap: break-word;
+}
+
+body.blog article section
+{
+	display: inline-block;
+	width: 40%;
+	text-align: center;
+	padding: 4%;
+	border-top: 2px dotted #FD91C1; 
+	border-bottom: 2px dotted #FD91C1; /* no sides with border radius to create bracket like borders */
+	border-radius: 50px;
+}
+
+section h1
+{
+	color: #7EB8E2;
+	font-family: 'Dancing Script', cursive;
+	font-size: 40px;
+	margin-top: -10px;
+}
+
+body.blog article section:nth-child(2) {float: right;} /* allows the blog posts (articles) to appear horizontially*/
+
+body.blog article section:first-child {float: left;}
+
+body.blog article small 
+{
+	font-size: 10px;
+	float: right;
+	color: #7EB8E2;
+}
+
+/* sets the date at the bottom of the article to have a tilde before it*/
+body.blog article small::before 
+{
+	content: "~ " ;
+}
+
+/*subscription page specific css*/
+body.subscribe
+{
+	background-image: url("smallcupcakes.png");
+}
+
+body.subscribe h2
+{
+	font-family: 'Dancing Script', cursive;
+	color: #FD91C1;
+	font-size: 70px;
+	margin-top: 0px;
+}
+
+/* again does the border for the div around the form elements, excluding the subscribe button */
+#detailsSection
+{
+	border-top: 2px dotted #FD91C1;
+	border-bottom: 2px dotted #FD91C1;
+	border-radius: 50px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+form, div
+{
+	text-align: center;
+}
+
+/* sets the style of the form boxes by type */
+input[type="text"], input[type="number"], input[type="email"]
+{
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	font-size: 16px;
+	text-align: center;
+	padding: 5px;
+	margin: 5px;
+	letter-spacing: 2px;
+	background: transparent;
+	border: none;
+	height: 30px;
+	color: #FD91C1;
+}
+
+.dayInput{width: 10%;}
+
+.yearInput{width: 20%;}
+
+.emailInput{width: 50%;}
+
+.monthSelect
+{
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	background: transparent;
+	letter-spacing: 2px;
+   	padding: 10px;
+   	font-size: 16px;
+	height: 40px;
+	border: 0;
+	color: #FD91C1;
+}
+
+/* style for the submit button, which changes color on hover */
+input[type="submit"]
+{
+	font-family: 'Handlee', cursive;
+	letter-spacing: 5px;
+	background-color: #FD91C1;
+    border: 0;
+	border-radius: 5px;
+	color: white;
+	margin-top: 20px;
+    padding: 15px 32px;
+    display: inline-block;
+	font-size: 20px;
+	transition: 1s;
+}
+
+input[type="submit"]:hover
+{
+	background: #FEDF74;
+	transition: 1s;
+}

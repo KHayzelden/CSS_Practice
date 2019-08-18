@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+
+	<meta charset="UTF-8">
+	<title>Subscribe</title>
+	<link href="portfolio css.css" rel="stylesheet" type="text/css">
+    
+    <!-- Imported Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Handlee" rel="stylesheet">
+    
+</head>
+
+<body class="subscribe"> <!-- class defined for css purposes --> 
+	
+    <!-- The code for the navigation bar, will be on every page with appropriate link s-->
+	<nav>
+    	<ul class="siteWideNav">
+    		<li><a href="H:\Client Side\Portfolio Home Page.html">Home</a></li>
+        	<li><a href="H:\Client Side\Portfolio About Page.html">About</a></li>
+       		<li><a href="H:\Client Side\Portfolio Blog Page.html">Blog</a></li>
+    	</ul>
+    </nav>
+    
+    <!-- form with text for name, numbers for date (and dropdown for month), and email section -->    
+    <!-- Doesnt do crap when clicked because this is all about the css so it just refreshes yolo -->
+    <form action="">
+    
+  		<h2>enter your details to subscribe</h2>
+        
+        <div id="detailsSection"> 
+        <!-- this div is so that I could do a border around the form elements, without including the submit button -->
+          	<input type="text" name="firstname" placeholder="first name">
+          	<input type="text" name="lastname" placeholder="last name">
+          
+          	<br>
+          
+          	<input type="number" class="dayInput" name="day" min="1" max="31" placeholder="1">
+          
+          	<select name="month" class="monthSelect">
+              	<option value="January">January</option>
+              	<option value="February">February</option>
+              	<option value="March" selected>March</option>
+              	<option value="April">April</option>
+              	<option value="May">May</option>
+              	<option value="June">June</option>
+              	<option value="July">July</option>
+              	<option value="August">August</option>
+              	<option value="September">September</option>
+              	<option value="October">October</option>
+              	<option value="November">November</option>
+              	<option value="December">December</option>
+          	</select>
+          
+          	<input type="number" class="yearInput" name="year" min="1900" max="2020" placeholder="1995">
+          
+          	<br>
+          
+          	<input type="email" class="emailInput" name="email" placeholder="email">
+        </div>
+        
+        <br><br>
+        
+  <input type="submit" value="Subscribe">
+  
+</form>
+</body>
+</html>
